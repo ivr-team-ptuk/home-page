@@ -33,25 +33,6 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # =========================
-# HERO
-# =========================
-
-st.markdown("""
-<div class="hero">
-
-    <h1>
-        IVR Scientific Tools
-    </h1>
-
-    <p>
-        أدوات احترافية للتعامل مع ملفات PDF
-        بسرعة وتصميم عصري.
-    </p>
-
-</div>
-""", unsafe_allow_html=True)
-
-# =========================
 # TOOLS
 # =========================
 
