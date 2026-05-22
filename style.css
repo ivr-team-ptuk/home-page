@@ -82,10 +82,10 @@ TOGGLE BUTTON
 ========================= */
 
 .nav-toggle{
-    position:fixed;
+    position:sticky;
 
     top:18px;
-    right:18px;
+    left:18px;
 
     width:48px;
     height:48px;
@@ -116,7 +116,7 @@ STICKY NAVBAR WRAPPER
 ========================= */
 
 .ivr-navbar-wrapper{
-    position:fixed;
+    position:sticky;
     top:10px;
 
     z-index:9999;
@@ -129,8 +129,8 @@ NAVBAR
 ========================= */
 
 .ivr-navbar{
-    position: fixed;
     display:flex;
+
     justify-content:space-between;
     align-items:center;
 
