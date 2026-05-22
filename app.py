@@ -5,7 +5,8 @@ import streamlit as st
 # =========================
 
 st.set_page_config(
-    page_title="IVR PDF Tools",
+    page_title="IVR Merge Tool",
+    page_icon="logo.png",
     layout="wide"
 )
 
