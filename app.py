@@ -12,20 +12,21 @@ st.set_page_config(
 )
 
 # =========================
-# LOAD CSS
+# LOAD CSS FILE
 # =========================
 
 with open("style.css", encoding="utf-8") as f:
-    st.markdown(
-        f"<style>{f.read()}</style>",
-        unsafe_allow_html=True
-    )
+    css = f.read()
 
 # =========================
-# HOME PAGE
+# HTML CONTENT
 # =========================
 
-components.html("""
+html_content = f"""
+
+<style>
+{css}
+</style>
 
 <div class="ivr-navbar">
 
@@ -154,4 +155,14 @@ components.html("""
 
 </div>
 
-""", height=900)
+"""
+
+# =========================
+# RENDER
+# =========================
+
+components.html(
+    html_content,
+    height=950,
+    scrolling=True
+)
