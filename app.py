@@ -81,9 +81,12 @@ function toggleNavbar() {{
             <a href="https://ivr-home-page.streamlit.app"
             class="nav-logo">
                 <img
-                    src="https://github.com/ivr-team-ptuk/home-page/blob/main/Black_Square-01.svg"
+                    src="C:\Users\tamem\OneDrive\المستندات\GitHub\home-page\Black_Square-01.svg"
                     class="nav-logo-img"
                 >
+                <span>
+                    IVR PDF Tools
+                </span>
             </a>
 
             <div class="nav-links">
