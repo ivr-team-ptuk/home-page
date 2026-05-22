@@ -229,8 +229,5 @@ function toggleNavbar() {{
 # RENDER HTML
 # =========================
 
-st.markdown(
-    html_content,
-    unsafe_allow_html=True
-)
+components.html( html_content, height=950, scrolling=True )
 
