@@ -75,7 +75,7 @@ with col1:
     )
 
     st.link_button(
-        "فتح الأداة",
+        "الذهاب لدمج الملفات",
         "https://ivr-merge-tool.streamlit.app",
         use_container_width=True
     )
@@ -100,7 +100,7 @@ with col2:
     )
 
     st.link_button(
-        "فتح الأداة",
+        "الذهاب لتعليم الملفات",
         "https://ivr-watermark-tool.streamlit.app",
         use_container_width=True
     )
@@ -126,7 +126,7 @@ with col3:
     )
 
     st.link_button(
-        "فتح الأداة",
+        "تحويل الصور إلى ملفات",
         "https://ivr-imagetopdf-tool.streamlit.app",
         use_container_width=True
     )
