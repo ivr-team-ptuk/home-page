@@ -39,9 +39,9 @@ st.markdown("""
 st.markdown(
     """
     <div class="hero">
-        <h1>IVR Scientific Tools</h1>
+        <h1>أدوات اللجنة العلمية - IVR</h1>
         <p>
-            أدوات احترافية للتعامل مع ملفات PDF والصور
+            أدوات للتعامل مع ملفات PDF والصور
         </p>
     </div>
     """,
@@ -91,8 +91,7 @@ with col2:
             <div class="tool-icon">🖋️</div>
             <h3>تعليم PDF</h3>
             <p>
-                إضافة علامات مائية
-                احترافية على ملفات PDF
+                إضافة علامات مائية على ملفات PDF
             </p>
         </div>
         """,
@@ -131,15 +130,6 @@ with col3:
         use_container_width=True
     )
 
-st.markdown(
-    """
-    <div class="footer">
-        IVR Scientific © 2026
-    </div>
-    """,
-    unsafe_allow_html=True
-)
-
 # =========================
 # FOOTER
 # =========================
@@ -147,7 +137,7 @@ st.markdown(
 st.markdown("""
 <div class="footer">
 
-    IVR Scientific © 2026
+    IVR Engineering Society © 2026
 
 </div>
 """, unsafe_allow_html=True)
