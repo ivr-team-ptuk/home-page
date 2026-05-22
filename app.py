@@ -76,7 +76,7 @@ function toggleNavbar() {{
             <button class="nav-toggle" onclick="toggleNavbar()">
                 ☰
             </button>
-            
+
         <div class="ivr-navbar">
 
             <div class="nav-logo">
@@ -84,6 +84,8 @@ function toggleNavbar() {{
             </div>
 
             <div class="nav-links">
+
+                <a href="" target="_top"></a>
 
                 <a href="https://ivr-watermark-tool.streamlit.app" target="_top">
                     تعليم الملفات
