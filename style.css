@@ -178,7 +178,7 @@ NAVBAR CONTENT
 .nav-logo{
     font-size:22px;
     font-weight:800;
-    /* white-space:nowrap; */
+    white-space:nowrap;
 }
 
 .nav-links{
