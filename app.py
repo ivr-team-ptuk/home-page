@@ -12,6 +12,43 @@ st.set_page_config(
 )
 
 # =========================
+# HIDE STREAMLIT DEFAULT UI
+# =========================
+
+st.markdown("""
+<style>
+
+#MainMenu {
+    visibility: hidden;
+}
+
+header {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+.stApp {
+    background: transparent;
+}
+
+.block-container{
+    padding-top:0rem;
+    padding-bottom:0rem;
+    padding-left:0rem;
+    padding-right:0rem;
+}
+
+iframe{
+    border:none !important;
+}
+
+</style>
+""", unsafe_allow_html=True)
+
+# =========================
 # LOAD CSS FILE
 # =========================
 
@@ -28,141 +65,174 @@ html_content = f"""
 {css}
 </style>
 
-<div class="ivr-navbar">
+<div class="page-wrapper">
 
-    <div class="nav-logo">
-        IVR PDF Tools
-    </div>
+    <!-- TOGGLE BUTTON -->
 
-    <div class="nav-links">
+    <button class="nav-toggle" onclick="toggleNavbar()">
+        ☰
+    </button>
 
-        <a href="https://ivr-watermark-tool.streamlit.app" target="_top">
-            تعليم الملفات
-        </a>
+    <!-- NAVBAR -->
 
-        <a href="https://ivr-merge-tool.streamlit.app" target="_top">
-            دمج الملفات
-        </a>
+    <div class="ivr-navbar-wrapper" id="navbarWrapper">
 
-        <a href="https://ivr-imagetopdf-tool.streamlit.app" target="_top">
-            الصور إلى PDF
-        </a>
+        <div class="ivr-navbar">
 
-    </div>
+            <div class="nav-logo">
+                IVR PDF Tools
+            </div>
 
-</div>
+            <div class="nav-links">
 
-<div class="hero">
+                <a href="https://ivr-watermark-tool.streamlit.app" target="_top">
+                    تعليم الملفات
+                </a>
 
-    <h1>
-        أدوات PDF خاصة بأعضاء اللجنة العلمية
-    </h1>
+                <a href="https://ivr-merge-tool.streamlit.app" target="_top">
+                    دمج الملفات
+                </a>
 
-    <p>
-        منصة لمعالجة ملفات PDF بسهولة
-    </p>
+                <a href="https://ivr-imagetopdf-tool.streamlit.app" target="_top">
+                    الصور إلى PDF
+                </a>
 
-</div>
+            </div>
 
-<div class="tools-grid">
-
-    <!-- WATERMARK -->
-
-    <div class="tool-card">
-
-        <div class="tool-icon">
-            🖊️
         </div>
 
-        <h3>
-            تعليم الملفات
-        </h3>
+    </div>
+
+    <!-- HERO -->
+
+    <div class="hero">
+
+        <h1>
+            أدوات PDF خاصة بأعضاء اللجنة العلمية
+        </h1>
 
         <p>
-            إضافة علامات مائية احترافية
-            على ملفات PDF
+            منصة لمعالجة ملفات PDF بسهولة
         </p>
-
-        <a class="tool-btn"
-        href="https://ivr-watermark-tool.streamlit.app"
-        target="_top">
-
-            فتح الأداة
-
-        </a>
 
     </div>
 
-    <!-- MERGE -->
+    <!-- TOOLS -->
 
-    <div class="tool-card">
+    <div class="tools-grid">
 
-        <div class="tool-icon">
-            📚
+        <!-- WATERMARK -->
+
+        <div class="tool-card">
+
+            <div class="tool-icon">
+                🖊️
+            </div>
+
+            <h3>
+                تعليم الملفات
+            </h3>
+
+            <p>
+                إضافة علامات مائية احترافية
+                على ملفات PDF
+            </p>
+
+            <a class="tool-btn"
+            href="https://ivr-watermark-tool.streamlit.app"
+            target="_top">
+
+                فتح الأداة
+
+            </a>
+
         </div>
 
-        <h3>
-            دمج الملفات
-        </h3>
+        <!-- MERGE -->
 
-        <p>
-            دمج عدة ملفات PDF
-            داخل ملف واحد
-        </p>
+        <div class="tool-card">
 
-        <a class="tool-btn"
-        href="https://ivr-merge-tool.streamlit.app"
-        target="_top">
+            <div class="tool-icon">
+                📚
+            </div>
 
-            فتح الأداة
+            <h3>
+                دمج الملفات
+            </h3>
 
-        </a>
+            <p>
+                دمج عدة ملفات PDF
+                داخل ملف واحد
+            </p>
+
+            <a class="tool-btn"
+            href="https://ivr-merge-tool.streamlit.app"
+            target="_top">
+
+                فتح الأداة
+
+            </a>
+
+        </div>
+
+        <!-- IMAGE TO PDF -->
+
+        <div class="tool-card">
+
+            <div class="tool-icon">
+                🖼️
+            </div>
+
+            <h3>
+                الصور إلى PDF
+            </h3>
+
+            <p>
+                تحويل الصور إلى ملفات PDF
+                بجودة عالية
+            </p>
+
+            <a class="tool-btn"
+            href="https://ivr-imagetopdf-tool.streamlit.app"
+            target="_top">
+
+                فتح الأداة
+
+            </a>
+
+        </div>
 
     </div>
 
-    <!-- IMAGE TO PDF -->
+    <!-- FOOTER -->
 
-    <div class="tool-card">
-
-        <div class="tool-icon">
-            🖼️
-        </div>
-
-        <h3>
-            الصور إلى PDF
-        </h3>
-
-        <p>
-            تحويل الصور إلى ملفات PDF
-            بجودة عالية
-        </p>
-
-        <a class="tool-btn"
-        href="https://ivr-imagetopdf-tool.streamlit.app"
-        target="_top">
-
-            فتح الأداة
-
-        </a>
-
+    <div class="footer">
+        IVR Engineering Society © 2026
     </div>
 
 </div>
 
-<div class="footer">
+<script>
 
-    IVR Engineering Society © 2026
+function toggleNavbar() {
 
-</div>
+    const navbar =
+        document.getElementById("navbarWrapper");
+
+    navbar.classList.toggle("collapsed");
+}
+
+</script>
 
 """
 
 # =========================
-# RENDER
+# RENDER HTML
 # =========================
 
 components.html(
     html_content,
-    height=950,
+    height=1200,
     scrolling=True
 )
+
