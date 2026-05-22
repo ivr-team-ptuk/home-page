@@ -90,7 +90,7 @@ function toggleNavbar() {{
                     تعليم الملفات
                 </a>
 
-                <a href="https://ivr-merge-tool.streamlit.app" target="_self">
+                <a href="https://ivr-merge-tool.streamlit.app" target="_parent">
                     دمج الملفات
                 </a>
 
