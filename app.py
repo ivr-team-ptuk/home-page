@@ -66,19 +66,18 @@ function toggleNavbar() {{
 
 <div class="page-wrapper">
 
-    <!-- TOGGLE BUTTON -->
-
     <!-- NAVBAR -->
 
     <div class="ivr-navbar-wrapper" id="navbarWrapper">
 
-        <div class="ivr-navbar">
 
             <!-- TOGGLE BUTTON -->
 
             <button class="nav-toggle" onclick="toggleNavbar()">
                 ☰
             </button>
+            
+        <div class="ivr-navbar">
 
             <div class="nav-logo">
                 IVR PDF Tools
