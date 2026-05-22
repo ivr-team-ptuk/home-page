@@ -66,45 +66,45 @@ function toggleNavbar() {{
 
 <div class="page-wrapper">
 
-    <!-- NAVBAR -->
+    # <!-- NAVBAR -->
 
-    <div class="ivr-navbar-wrapper" id="navbarWrapper">
-
-
-            <!-- TOGGLE BUTTON -->
-
-            <button class="nav-toggle" onclick="toggleNavbar()">
-                ☰
-            </button>
-
-        <div class="ivr-navbar">
-
-            <div class="nav-logo">
-                IVR PDF Tools
-            </div>
-
-            <div class="nav-links">
+    # <div class="ivr-navbar-wrapper" id="navbarWrapper">
 
 
-                <a href="https://ivr-watermark-tool.streamlit.app" target="_blank">
-                    تعليم الملفات
-                </a>
+    #         <!-- TOGGLE BUTTON -->
 
-                <a href="https://ivr-merge-tool.streamlit.app" target="_blank">
-                    دمج الملفات
-                </a>
+    #         <button class="nav-toggle" onclick="toggleNavbar()">
+    #             ☰
+    #         </button>
 
-                <a href="https://ivr-imagetopdf-tool.streamlit.app" target="_blank">
-                    الصور إلى PDF
-                </a>
+    #     <div class="ivr-navbar">
 
-                <a href="" target="_blank"></a>
+    #         <div class="nav-logo">
+    #             IVR PDF Tools
+    #         </div>
 
-            </div>
+    #         <div class="nav-links">
 
-        </div>
 
-    </div>
+    #             <a href="https://ivr-watermark-tool.streamlit.app" target="_blank">
+    #                 تعليم الملفات
+    #             </a>
+
+    #             <a href="https://ivr-merge-tool.streamlit.app" target="_blank">
+    #                 دمج الملفات
+    #             </a>
+
+    #             <a href="https://ivr-imagetopdf-tool.streamlit.app" target="_blank">
+    #                 الصور إلى PDF
+    #             </a>
+
+    #             <a href="" target="_blank"></a>
+
+    #         </div>
+
+    #     </div>
+
+    # </div>
 
     <!-- HERO -->
 
