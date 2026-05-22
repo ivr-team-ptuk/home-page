@@ -13,16 +13,11 @@ st.set_page_config(
 # LOAD CSS
 # =========================
 
-def load_css():
-
-    with open("style.css", "r", encoding="utf-8") as f:
-
-        st.markdown(
-            f"<style>{f.read()}</style>",
-            unsafe_allow_html=True
-        )
-
-load_css()
+with open("style.css", encoding="utf-8") as f:
+    st.markdown(
+        f"<style>{f.read()}</style>",
+        unsafe_allow_html=True
+    )
 
 # =========================
 # NAVBAR
@@ -32,25 +27,31 @@ st.markdown("""
 <div class="ivr-navbar">
 
     <div class="nav-logo">
-        IVR Tools
+        IVR PDF Tools
     </div>
 
     <div class="nav-links">
-        <a href="https://home-url.streamlit.app" target="_self">
-            الرئيسية
+
+        <a href="https://home-url.streamlit.app"
+        target="_self">
+        الرئيسية
         </a>
 
-        <a href="https://merge-url.streamlit.app" target="_self">
-            دمج PDF
+        <a href="https://merge-url.streamlit.app"
+        target="_self">
+        دمج PDF
         </a>
 
-        <a href="https://watermark-url.streamlit.app" target="_self">
-            تعليم الملفات
+        <a href="https://watermark-url.streamlit.app"
+        target="_self">
+        تعليم الملفات
         </a>
 
-        <a href="https://images-url.streamlit.app" target="_self">
-            صور إلى PDF
+        <a href="https://images-url.streamlit.app"
+        target="_self">
+        صور إلى PDF
         </a>
+
     </div>
 
 </div>
@@ -61,39 +62,71 @@ st.markdown("""
 # =========================
 
 st.markdown("""
-
 <div class="hero">
 
     <h1>
-        أدوات PDF احترافية
+        IVR Scientific Tools
     </h1>
 
     <p>
-        منصة متكاملة لمعالجة ملفات PDF بسهولة وسرعة
+        أدوات احترافية للتعامل مع ملفات PDF
+        بسرعة وتصميم عصري.
     </p>
 
 </div>
-
 """, unsafe_allow_html=True)
 
 # =========================
-# TOOL CARDS
+# TOOLS
 # =========================
 
 col1, col2, col3 = st.columns(3)
 
 # =========================
-# WATERMARK
+# MERGE
 # =========================
 
 with col1:
 
     st.markdown("""
-
     <div class="tool-card">
 
         <div class="tool-icon">
-            🖊️
+            📄
+        </div>
+
+        <h3>
+            دمج ملفات PDF
+        </h3>
+
+        <p>
+            دمج عدة ملفات PDF
+            مع ترتيبها وإضافة
+            علامات مرجعية.
+        </p>
+
+        <a class="tool-btn"
+        href="https://merge-url.streamlit.app"
+        target="_self">
+
+            فتح الأداة
+
+        </a>
+
+    </div>
+    """, unsafe_allow_html=True)
+
+# =========================
+# WATERMARK
+# =========================
+
+with col2:
+
+    st.markdown("""
+    <div class="tool-card">
+
+        <div class="tool-icon">
+            🛡️
         </div>
 
         <h3>
@@ -101,63 +134,29 @@ with col1:
         </h3>
 
         <p>
-            إضافة علامات مائية احترافية
-            على ملفات PDF
+            إضافة شعارات وعلامات
+            مائية على ملفات PDF
+            بشكل احترافي.
         </p>
 
         <a class="tool-btn"
-        href="https://ivr-watermark-tool.streamlit.app">
+        href="https://watermark-url.streamlit.app"
+        target="_self">
 
             فتح الأداة
 
         </a>
 
     </div>
-
     """, unsafe_allow_html=True)
 
 # =========================
-# MERGE
-# =========================
-
-with col2:
-
-    st.markdown("""
-
-    <div class="tool-card">
-
-        <div class="tool-icon">
-            📚
-        </div>
-
-        <h3>
-            دمج الملفات
-        </h3>
-
-        <p>
-            دمج عدة ملفات PDF
-            داخل ملف واحد
-        </p>
-
-        <a class="tool-btn"
-        href="https://ivr-merge-tool.streamlit.app">
-
-            فتح الأداة
-
-        </a>
-
-    </div>
-
-    """, unsafe_allow_html=True)
-
-# =========================
-# IMAGES
+# IMAGES TO PDF
 # =========================
 
 with col3:
 
     st.markdown("""
-
     <div class="tool-card">
 
         <div class="tool-icon">
@@ -165,23 +164,24 @@ with col3:
         </div>
 
         <h3>
-            الصور إلى PDF
+            صور إلى PDF
         </h3>
 
         <p>
-            تحويل الصور إلى ملفات PDF
-            بجودة عالية
+            تحويل الصور إلى PDF
+            مع ترتيب الصفحات
+            وإضافة علامات مرجعية.
         </p>
 
         <a class="tool-btn"
-        href="https://ivr-imagetopdf-tool.streamlit.app">
+        href="https://images-url.streamlit.app"
+        target="_self">
 
             فتح الأداة
 
         </a>
 
     </div>
-
     """, unsafe_allow_html=True)
 
 # =========================
@@ -189,11 +189,9 @@ with col3:
 # =========================
 
 st.markdown("""
-
 <div class="footer">
 
     IVR Scientific © 2026
 
 </div>
-
 """, unsafe_allow_html=True)
