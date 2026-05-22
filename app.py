@@ -59,7 +59,7 @@ with open("style.css", encoding="utf-8") as f:
 # HTML CONTENT
 # =========================
 
-html_content = f"""
+html_content = """
 
 <style>
 {css}
