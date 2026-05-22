@@ -68,10 +68,6 @@ function toggleNavbar() {{
 
     <!-- TOGGLE BUTTON -->
 
-    <button class="nav-toggle" onclick="toggleNavbar()">
-        ☰
-    </button>
-
     <!-- NAVBAR -->
 
     <div class="ivr-navbar-wrapper" id="navbarWrapper">
