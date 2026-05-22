@@ -187,10 +187,28 @@ COLLAPSED NAVBAR
 NAVBAR CONTENT
 ========================= */
 
-.nav-logo{
-    font-size:22px;
-    font-weight:800;
-    white-space:nowrap;
+.nav-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-size: 22px;
+
+    font-weight: 800;
+
+    color: white;
+}
+
+.nav-logo-img {
+
+    width: 42px;
+
+    height: 42px;
+
+    object-fit: contain;
 }
 
 .nav-links{
