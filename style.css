@@ -82,7 +82,7 @@ TOGGLE BUTTON
 ========================= */
 
 .nav-toggle{
-    position:fixed;
+    position:sticky;
 
     top:18px;
     left:18px;
