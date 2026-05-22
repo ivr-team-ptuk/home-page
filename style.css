@@ -218,7 +218,7 @@ p, span, label {
 NAVBAR
 ========================= */
 
-/* .ivr-navbar {
+.ivr-navbar {
 
     position: fixed;
     top: 50px;
@@ -272,7 +272,7 @@ NAVBAR
 
 .ivr-navbar a {
     display: inline-block;
-} */
+}
 
 /* =========================
 HERO
@@ -397,7 +397,7 @@ FOOTER
 NAVBAR
 ========================= */
 
-.ivr-navbar {
+/* .ivr-navbar {
 
     display: flex;
 
@@ -452,7 +452,7 @@ NAVBAR
     background: rgba(255,255,255,0.08);
 
     color: #FF5B04;
-}
+} */
 
 /* =========================
 MOBILE
