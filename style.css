@@ -277,3 +277,45 @@ MOBILE
         font-size:18px;
     }
 }
+
+/* =========================
+COMPONENTS.HTML FIX
+========================= */
+
+iframe {
+
+    width: 100% !important;
+}
+
+/* =========================
+TOOLS GRID
+========================= */
+
+.tools-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 24px;
+}
+
+/* =========================
+COMPONENT BODY
+========================= */
+
+body {
+
+    margin: 0;
+
+    padding: 0 20px;
+
+    background: transparent;
+
+    font-family: 'Almarai', sans-serif;
+
+    direction: rtl;
+
+    color: white;
+}

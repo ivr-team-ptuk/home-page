@@ -22,9 +22,8 @@ with open("style.css", encoding="utf-8") as f:
     )
 
 # =========================
-# NAVBAR
+# HOME PAGE
 # =========================
-
 
 components.html("""
 
