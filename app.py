@@ -25,29 +25,21 @@ with open("style.css", encoding="utf-8") as f:
 
 st.markdown("""
 <div class="ivr-navbar">
-
-        <a href="https://home-url.streamlit.app"
-        target="_self">
-        الرئيسية
-        </a>
-
-        <a href="https://merge-url.streamlit.app"
-        target="_self">
-        دمج PDF
-        </a>
-
-        <a href="https://watermark-url.streamlit.app"
-        target="_self">
-        تعليم الملفات
-        </a>
-
-        <a href="https://images-url.streamlit.app"
-        target="_self">
-        صور إلى PDF
-        </a>
-
+    <a href="https://ivr-home-page.streamlit.app" target="_blank">Home</a>
+    <a href="https://ivr-merge-tool.streamlit.app" target="_blank">Merge PDF</a>
+    <a href="https://ivr-watermark-tool.streamlit.app" target="_blank">Watermark PDF</a>
+    <a href="https://ivr-imagetopdf-tool.streamlit.app" target="_blank">Image to PDF</a>
 </div>
 """, unsafe_allow_html=True)
+
+# st.markdown("""
+# <div class="ivr-navbar">
+#         <a href="https://home-url.streamlit.app" target="_self">الرئيسية</a>
+#         <a href="https://merge-url.streamlit.app" target="_self">دمج PDF</a>
+#         <a href="https://watermark-url.streamlit.app" target="_self">تعليم الملفات</a>
+#         <a href="https://images-url.streamlit.app" target="_self">صور إلى PDF</a>
+# </div>
+# """, unsafe_allow_html=True)
 
 # =========================
 # HERO
