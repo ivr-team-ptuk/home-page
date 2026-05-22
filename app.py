@@ -18,27 +18,14 @@ st.set_page_config(
 st.markdown("""
 <style>
 
-#MainMenu {
-    visibility: hidden;
-}
-
-header {
-    visibility: hidden;
-}
-
-footer {
-    visibility: hidden;
-}
-
-.stApp {
-    background: transparent;
+#MainMenu,
+header,
+footer{
+    visibility:hidden;
 }
 
 .block-container{
-    padding-top:0rem;
-    padding-bottom:0rem;
-    padding-left:0rem;
-    padding-right:0rem;
+    padding:0;
 }
 
 iframe{
@@ -232,7 +219,7 @@ function toggleNavbar() {
 
 components.html(
     html_content,
-    height=1200,
-    scrolling=True
+    height=1400,
+    scrolling=False
 )
 
