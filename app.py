@@ -94,7 +94,7 @@ function toggleNavbar() {{
                     دمج الملفات
                 </a>
 
-                <a href="https://ivr-imagetopdf-tool.streamlit.app" target="_self">
+                <a href="https://ivr-imagetopdf-tool.streamlit.app" target="_blank">
                     الصور إلى PDF
                 </a>
 
