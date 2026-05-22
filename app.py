@@ -79,7 +79,7 @@ function toggleNavbar() {{
         <div class="ivr-navbar">
 
             <div class="nav-logo">
-                <source media="(min-width: 650px)" srcset="Black_Square-01.svg">
+                <source media="Black_Square-01.svg" srcset="Black_Square-01.svg">
             </div>
 
             <div class="nav-links">
