@@ -53,228 +53,6 @@ html, body, [data-testid="stAppViewContainer"] {
 }
 
 /* =========================
-SIDEBAR
-========================= */
-
-section[data-testid="stSidebar"] {
-
-    background:
-        rgba(0,0,0,0.18);
-
-    border-left:
-        1px solid var(--border);
-
-    backdrop-filter: blur(14px);
-}
-
-/* =========================
-CARDS
-========================= */
-
-.block-container {
-
-    padding-top: 2rem;
-}
-
-.ivr-card {
-
-    background: var(--surface);
-
-    border: 1px solid var(--border);
-
-    border-radius: var(--radius);
-
-    padding: 24px;
-
-    backdrop-filter: blur(12px);
-
-    box-shadow: var(--shadow);
-}
-
-/* =========================
-BUTTONS
-========================= */
-
-.stButton > button {
-
-    width: 100%;
-
-    border-radius: 16px;
-
-    border: none;
-
-    background: var(--primary);
-
-    color: white;
-
-    font-weight: bold;
-
-    padding: 14px;
-
-    transition: 0.25s;
-}
-
-.stButton > button:hover {
-
-    background: var(--primary-hover);
-
-    transform: translateY(-2px);
-}
-
-/* =========================
-INPUTS
-========================= */
-
-.stTextInput input,
-.stNumberInput input,
-.stTextArea textarea,
-.stSelectbox div[data-baseweb="select"] {
-
-    background:
-        rgba(255,255,255,0.06) !important;
-
-    border:
-        1px solid var(--border) !important;
-
-    border-radius: 14px !important;
-
-    color: white !important;
-}
-
-/* =========================
-UPLOAD AREA
-========================= */
-
-[data-testid="stFileUploader"] {
-
-    border:
-        2px dashed rgba(255,255,255,0.18);
-
-    border-radius: 24px;
-
-    padding: 30px;
-
-    background:
-        rgba(255,255,255,0.03);
-
-    transition: 0.25s;
-}
-
-[data-testid="stFileUploader"]:hover {
-
-    border-color: var(--primary);
-
-    background:
-        rgba(255,255,255,0.05);
-}
-
-/* =========================
-SLIDER
-========================= */
-
-.stSlider {
-    direction: ltr !important;
-    text-align: left !important;
-    unicode-bidi: normal !important;
-    padding-top: 10px;
-}
-
-/* =========================
-PREVIEW
-========================= */
-
-.preview-pane {
-
-    background: rgba(255,255,255,0.04);
-
-    border: 1px solid var(--border);
-
-    border-radius: 24px;
-
-    padding: 20px;
-
-    box-shadow: var(--shadow);
-
-    position: sticky;
-
-    top: 20px;
-}
-
-/* =========================
-HEADERS
-========================= */
-
-h1, h2, h3 {
-
-    color: white;
-}
-
-p, span, label {
-
-    color: var(--text-muted);
-}
-
-/* =========================
-NAVBAR
-========================= */
-
-.ivr-navbar {
-
-    position: fixed;
-    top: 50px;
-    left: 0;
-    right: 0;
-
-    z-index: 9999;
-
-    display: flex;
-    align-items: center;
-    gap: 12px;
-
-    padding: 14px 18px;
-
-    border-radius: 0 0 18px 18px;
-
-    background: rgba(255,255,255,0.05);
-
-    border: 1px solid rgba(255,255,255,0.08);
-
-    backdrop-filter: blur(12px);
-
-    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
-}
-
-.ivr-navbar a {
-
-    text-decoration: none;
-
-    color: white;
-
-    font-weight: 700;
-
-    padding: 10px 18px;
-
-    border-radius: 12px;
-
-    transition: 0.2s;
-
-    background: transparent;
-}
-
-.ivr-navbar a:hover {
-
-    background: rgba(255,255,255,0.08);
-
-    color: #FF5B04;
-
-    transform: translateY(-1px);
-}
-
-.ivr-navbar a {
-    display: inline-block;
-}
-
-/* =========================
 HERO
 ========================= */
 
@@ -354,6 +132,30 @@ TOOL CARDS
     color: rgba(255,255,255,0.75);
 
     margin-bottom: 24px;
+}
+
+.tool-btn {
+
+    display: inline-block;
+
+    padding: 12px 24px;
+
+    background: #FF5B04;
+
+    color: white;
+
+    border-radius: 14px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.tool-btn:hover {
+
+    background: #e65100;
 }
 
 /* =========================

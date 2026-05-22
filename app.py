@@ -24,121 +24,202 @@ with open("style.css", encoding="utf-8") as f:
 # NAVBAR
 # =========================
 
+import streamlit as st
+
+# =========================
+# PAGE CONFIG
+# =========================
+
+st.set_page_config(
+    page_title="IVR PDF Tools",
+    layout="wide"
+)
+
+# =========================
+# LOAD CSS
+# =========================
+
+def load_css():
+
+    with open("style.css", "r", encoding="utf-8") as f:
+
+        st.markdown(
+            f"<style>{f.read()}</style>",
+            unsafe_allow_html=True
+        )
+
+load_css()
+
+# =========================
+# NAVBAR
+# =========================
+
 st.markdown("""
+
 <div class="ivr-navbar">
-    <a href="https://ivr-home-page.streamlit.app" target="_blank">Home</a>
-    <a href="https://ivr-merge-tool.streamlit.app" target="_blank">Merge PDF</a>
-    <a href="https://ivr-watermark-tool.streamlit.app" target="_blank">Watermark PDF</a>
-    <a href="https://ivr-imagetopdf-tool.streamlit.app" target="_blank">Image to PDF</a>
+
+    <div class="nav-logo">
+        IVR PDF Tools
+    </div>
+
+    <div class="nav-links">
+
+        <a href="ivr-watermark-tool.streamlit.app">
+            تعليم الملفات
+        </a>
+
+        <a href="ivr-merge-tool.streamlit.app">
+            دمج الملفات
+        </a>
+
+        <a href="ivr-imagetopdf-tool.streamlit.app">
+            الصور إلى PDF
+        </a>
+
+    </div>
+
 </div>
+
 """, unsafe_allow_html=True)
 
 # =========================
-# TOOLS
+# HERO
 # =========================
 
-st.markdown(
-    """
-    <div class="hero">
-        <h1>أدوات اللجنة العلمية - IVR</h1>
-        <p>
-            أدوات للتعامل مع ملفات PDF والصور
-        </p>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+components.html("""
 
-st.divider()
+<div class="hero">
+
+    <h1>
+        أدوات PDF خاصة بأعضاء اللجنة العلمية
+    </h1>
+
+    <p>
+        منصة لمعالجة ملفات PDF بسهولة
+    </p>
+
+</div>
+
+""", unsafe_allow_html=True)
+
+# =========================
+# TOOL CARDS
+# =========================
 
 col1, col2, col3 = st.columns(3)
-
-# =========================
-# MERGE
-# =========================
-
-with col1:
-
-    st.markdown(
-        """
-        <div class="tool-card">
-            <div class="tool-icon">📄</div>
-            <h3>دمج PDF</h3>
-            <p>
-                دمج ملفات PDF
-                وترتيبها وإضافة
-                علامات مرجعية
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-
-    st.link_button(
-        "الذهاب لدمج الملفات",
-        "https://ivr-merge-tool.streamlit.app",
-        use_container_width=True
-    )
 
 # =========================
 # WATERMARK
 # =========================
 
-with col2:
+with col1:
 
-    st.markdown(
-        """
-        <div class="tool-card">
-            <div class="tool-icon">🖋️</div>
-            <h3>تعليم PDF</h3>
-            <p>
-                إضافة علامات مائية على ملفات PDF
-            </p>
+    st.markdown("""
+
+    <div class="tool-card">
+
+        <div class="tool-icon">
+            🖊️
         </div>
-        """,
-        unsafe_allow_html=True
-    )
 
-    st.link_button(
-        "الذهاب لتعليم الملفات",
-        "https://ivr-watermark-tool.streamlit.app",
-        use_container_width=True
-    )
+        <h3>
+            تعليم الملفات
+        </h3>
+
+        <p>
+            إضافة علامات مائية احترافية
+            على ملفات PDF
+        </p>
+
+        <a class="tool-btn"
+        href="https://ivr-watermark-tool.streamlit.app">
+
+            فتح الأداة
+
+        </a>
+
+    </div>
+
+    """, unsafe_allow_html=True)
 
 # =========================
-# IMAGE TO PDF
+# MERGE
+# =========================
+
+with col2:
+
+    st.markdown("""
+
+    <div class="tool-card">
+
+        <div class="tool-icon">
+            📚
+        </div>
+
+        <h3>
+            دمج الملفات
+        </h3>
+
+        <p>
+            دمج عدة ملفات PDF
+            داخل ملف واحد
+        </p>
+
+        <a class="tool-btn"
+        href="https://ivr-merge-tool.streamlit.app">
+
+            فتح الأداة
+
+        </a>
+
+    </div>
+
+    """, unsafe_allow_html=True)
+
+# =========================
+# IMAGES
 # =========================
 
 with col3:
 
-    st.markdown(
-        """
-        <div class="tool-card">
-            <div class="tool-icon">🖼️</div>
-            <h3>صور إلى PDF</h3>
-            <p>
-                تحويل الصور إلى
-                ملف PDF مرتب
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    st.markdown("""
 
-    st.link_button(
-        "تحويل الصور إلى ملفات",
-        "https://ivr-imagetopdf-tool.streamlit.app",
-        use_container_width=True
-    )
+    <div class="tool-card">
+
+        <div class="tool-icon">
+            🖼️
+        </div>
+
+        <h3>
+            الصور إلى PDF
+        </h3>
+
+        <p>
+            تحويل الصور إلى ملفات PDF
+            بجودة عالية
+        </p>
+
+        <a class="tool-btn"
+        href="https://ivr-imagetopdf-tool.streamlit.app">
+
+            فتح الأداة
+
+        </a>
+
+    </div>
+
+    """, unsafe_allow_html=True)
 
 # =========================
 # FOOTER
 # =========================
 
 st.markdown("""
+
 <div class="footer">
 
     IVR Engineering Society © 2026
 
 </div>
-""", unsafe_allow_html=True)
+
+""", height=90)
