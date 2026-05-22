@@ -6,7 +6,7 @@ import streamlit as st
 
 st.set_page_config(
     page_title="IVR Merge Tool",
-    page_icon="logo.png",
+    page_icon="Black_Square-01.svg",
     layout="wide"
 )
 
