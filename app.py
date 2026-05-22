@@ -78,6 +78,12 @@ function toggleNavbar() {{
 
         <div class="ivr-navbar">
 
+            <!-- TOGGLE BUTTON -->
+
+            <button class="nav-toggle" onclick="toggleNavbar()">
+                ☰
+            </button>
+
             <div class="nav-logo">
                 IVR PDF Tools
             </div>
