@@ -79,7 +79,7 @@ function toggleNavbar() {{
         <div class="ivr-navbar">
 
             <div class="nav-logo">
-                <img src="Black_Square-01.svg" alt="IVR TEAM" width="400" height="300">
+                <img src="Black_Square-01.svg" alt="IVR TEAM" width="20" height="15">
             </div>
 
             <div class="nav-links">
