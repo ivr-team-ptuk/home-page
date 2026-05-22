@@ -1,218 +1,166 @@
 @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
 
-:root {
+:root{
+    --primary:#FF5B04;
+    --primary-hover:#e65100;
 
-    --primary: #FF5B04;
-    --primary-hover: #e65100;
+    --bg:#0c5157;
+    --bg-dark:#08393d;
 
-    --secondary: #075056;
+    --surface:rgba(255,255,255,0.06);
+    --border:rgba(255,255,255,0.08);
 
-    --bg: #0c5157;
-    --bg-dark: #08393d;
+    --text:#ffffff;
+    --text-muted:rgba(255,255,255,0.75);
 
-    --surface: rgba(255,255,255,0.06);
-
-    --surface-2: rgba(255,255,255,0.03);
-
-    --border: rgba(255,255,255,0.12);
-
-    --text: #FFFFFF;
-
-    --text-muted: #d9d9d9;
-
-    --shadow:
-        0 8px 24px rgba(0,0,0,0.25);
-
-    --radius: 20px;
+    --radius:24px;
 }
 
-html, body, [class*="css"] {
+/* =========================
+GLOBAL
+========================= */
 
-    font-family: 'Almarai', sans-serif;
+html,
+body{
+    margin:0;
+    padding:0;
+    direction:rtl;
+    font-family:'Almarai',sans-serif;
+    background:transparent;
+    color:var(--text);
 }
 
-html, body, [data-testid="stAppViewContainer"] {
-    direction: rtl;
-    text-align: right;
+*{
+    box-sizing:border-box;
 }
 
-* {
-    unicode-bidi: plaintext;
-}
+/* =========================
+PAGE WRAPPER
+========================= */
 
-.stApp {
+.page-wrapper{
+    min-height:100vh;
+    padding:20px;
 
     background:
         linear-gradient(
             135deg,
-            #0c5157,
-            #08393d
+            var(--bg),
+            var(--bg-dark)
         );
-
-    color: var(--text);
-}
-
-body{
-
-    margin:0;
-
-    padding:0 20px;
-
-    background:transparent;
-
-    font-family:'Almarai',sans-serif;
-
-    direction:rtl;
-
-    color:white;
-}
-
-/* =========================
-STICKY NAVBAR
-========================= */
-
-.ivr-navbar-wrapper {
-
-    position: sticky;
-
-    top: 0;
-
-    z-index: 9999;
-
-    padding-top: 12px;
-}
-
-/* =========================
-NAVBAR
-========================= */
-
-.ivr-navbar {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    padding: 18px 24px;
-
-    border-radius: 20px;
-
-    background: rgba(255,255,255,0.06);
-
-    border: 1px solid rgba(255,255,255,0.08);
-
-    backdrop-filter: blur(14px);
-
-    transition: 0.3s;
-
-    overflow: hidden;
-}
-
-/* =========================
-COLLAPSED
-========================= */
-
-.ivr-navbar.collapsed {
-
-    max-height: 0;
-
-    opacity: 0;
-
-    padding-top: 0;
-
-    padding-bottom: 0;
-
-    border: none;
-
-    margin: 0;
 }
 
 /* =========================
 TOGGLE BUTTON
 ========================= */
 
-.nav-toggle {
+.nav-toggle{
+    position:fixed;
 
-    position: fixed;
+    top:18px;
+    left:18px;
 
-    top: 18px;
+    width:48px;
+    height:48px;
 
-    left: 18px;
+    border:none;
+    border-radius:14px;
 
-    z-index: 10000;
+    cursor:pointer;
 
-    width: 48px;
+    z-index:99999;
 
-    height: 48px;
+    color:white;
+    font-size:20px;
 
-    border-radius: 14px;
+    background:rgba(255,255,255,0.08);
 
-    border: none;
+    backdrop-filter:blur(12px);
 
-    cursor: pointer;
-
-    background: rgba(255,255,255,0.08);
-
-    color: white;
-
-    font-size: 20px;
-
-    backdrop-filter: blur(10px);
-
-    transition: 0.2s;
+    transition:0.2s;
 }
 
-.nav-toggle:hover {
+.nav-toggle:hover{
+    background:rgba(255,255,255,0.14);
+}
 
-    background: rgba(255,255,255,0.14);
+/* =========================
+STICKY NAVBAR WRAPPER
+========================= */
+
+.ivr-navbar-wrapper{
+    position:sticky;
+    top:10px;
+
+    z-index:9999;
+
+    transition:0.3s;
 }
 
 /* =========================
 NAVBAR
 ========================= */
 
-.ivr-navbar {
-
+.ivr-navbar{
     display:flex;
 
     justify-content:space-between;
-
     align-items:center;
 
-    padding:18px 24px;
+    gap:20px;
 
+    padding:18px 24px;
     margin-bottom:40px;
 
     border-radius:20px;
 
-    background:rgba(255,255,255,0.05);
+    background:rgba(255,255,255,0.06);
 
-    border:1px solid rgba(255,255,255,0.08);
+    border:1px solid var(--border);
 
-    backdrop-filter:blur(12px);
+    backdrop-filter:blur(14px);
+
+    transition:0.3s;
+
+    overflow:hidden;
 }
 
-.nav-logo {
+/* =========================
+COLLAPSED NAVBAR
+========================= */
 
+.ivr-navbar-wrapper.collapsed .ivr-navbar{
+    opacity:0;
+
+    transform:translateY(-20px);
+
+    max-height:0;
+
+    padding-top:0;
+    padding-bottom:0;
+
+    margin-bottom:0;
+
+    border:none;
+}
+
+/* =========================
+NAVBAR CONTENT
+========================= */
+
+.nav-logo{
     font-size:22px;
-
     font-weight:800;
-
-    color:white;
+    white-space:nowrap;
 }
 
-.nav-links {
-
+.nav-links{
     display:flex;
-
     gap:12px;
-
     flex-wrap:wrap;
 }
 
-.nav-links a {
-
+.nav-links a{
     text-decoration:none;
 
     color:white;
@@ -224,47 +172,39 @@ NAVBAR
     transition:0.2s;
 }
 
-.nav-links a:hover {
-
+.nav-links a:hover{
     background:rgba(255,255,255,0.08);
-
-    color:#FF5B04;
+    color:var(--primary);
 }
 
 /* =========================
 HERO
 ========================= */
 
-.hero {
-
+.hero{
     text-align:center;
-
-    padding:40px 20px 60px 20px;
+    padding:40px 20px 60px;
 }
 
-.hero h1 {
-
+.hero h1{
     font-size:54px;
-
     margin-bottom:18px;
 }
 
-.hero p {
-
+.hero p{
     font-size:22px;
-
-    color:rgba(255,255,255,0.75);
+    color:var(--text-muted);
 }
 
 /* =========================
 TOOLS GRID
 ========================= */
 
-.tools-grid {
-
+.tools-grid{
     display:grid;
 
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    grid-template-columns:
+        repeat(auto-fit,minmax(260px,1fr));
 
     gap:24px;
 }
@@ -273,11 +213,10 @@ TOOLS GRID
 CARDS
 ========================= */
 
-.tool-card {
-
+.tool-card{
     background:rgba(255,255,255,0.05);
 
-    border:1px solid rgba(255,255,255,0.08);
+    border:1px solid var(--border);
 
     border-radius:28px;
 
@@ -290,41 +229,34 @@ CARDS
     transition:0.25s;
 }
 
-.tool-card:hover {
-
+.tool-card:hover{
     transform:translateY(-6px);
-
-    border-color:#FF5B04;
+    border-color:var(--primary);
 }
 
-.tool-icon {
-
+.tool-icon{
     font-size:52px;
-
     margin-bottom:16px;
 }
 
-.tool-card h3 {
-
+.tool-card h3{
     margin-bottom:14px;
 }
 
-.tool-card p {
-
-    color:rgba(255,255,255,0.75);
+.tool-card p{
+    color:var(--text-muted);
 
     line-height:1.8;
 
     margin-bottom:24px;
 }
 
-.tool-btn {
-
+.tool-btn{
     display:inline-block;
 
     padding:12px 24px;
 
-    background:#FF5B04;
+    background:var(--primary);
 
     color:white;
 
@@ -337,20 +269,18 @@ CARDS
     transition:0.2s;
 }
 
-.tool-btn:hover {
-
-    background:#e65100;
+.tool-btn:hover{
+    background:var(--primary-hover);
 }
 
 /* =========================
 FOOTER
 ========================= */
 
-.footer {
-
+.footer{
     text-align:center;
 
-    padding:50px 0 10px 0;
+    padding:60px 0 20px;
 
     color:rgba(255,255,255,0.5);
 }
@@ -362,20 +292,14 @@ MOBILE
 @media (max-width:900px){
 
     .ivr-navbar{
-
         flex-direction:column;
-
-        gap:16px;
     }
 
     .hero h1{
-
         font-size:36px;
     }
 
     .hero p{
-
         font-size:18px;
     }
 }
-
