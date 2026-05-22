@@ -85,7 +85,7 @@ function toggleNavbar() {{
 
             <div class="nav-links">
 
-                <a href="" target="_top"></a>
+                <a href="" target="_top">.</a>
 
                 <a href="https://ivr-watermark-tool.streamlit.app" target="_top">
                     تعليم الملفات
