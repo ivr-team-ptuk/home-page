@@ -67,7 +67,7 @@ function toggleNavbar() {{
 <div class="page-wrapper">
 
     <!-- NAVBAR -->
-    <!-- <div class="ivr-navbar-wrapper" id="navbarWrapper">
+    <div class="ivr-navbar-wrapper" id="navbarWrapper">
 
 
             <!-- TOGGLE BUTTON -->
@@ -103,7 +103,7 @@ function toggleNavbar() {{
 
         </div>
 
-    </div> -->
+    </div>
 
     <!-- HERO -->
 
