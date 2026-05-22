@@ -356,30 +356,6 @@ TOOL CARDS
     margin-bottom: 24px;
 }
 
-.tool-btn {
-
-    display: inline-block;
-
-    padding: 12px 24px;
-
-    background: #FF5B04;
-
-    color: white;
-
-    border-radius: 14px;
-
-    text-decoration: none;
-
-    font-weight: bold;
-
-    transition: 0.2s;
-}
-
-.tool-btn:hover {
-
-    background: #e65100;
-}
-
 /* =========================
 FOOTER
 ========================= */
