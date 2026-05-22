@@ -26,8 +26,6 @@ with open("style.css", encoding="utf-8") as f:
 st.markdown("""
 <div class="ivr-navbar">
 
-    <div class="nav-links">
-
         <a href="https://home-url.streamlit.app"
         target="_self">
         الرئيسية
@@ -47,8 +45,6 @@ st.markdown("""
         target="_self">
         صور إلى PDF
         </a>
-
-    </div>
 
 </div>
 """, unsafe_allow_html=True)
