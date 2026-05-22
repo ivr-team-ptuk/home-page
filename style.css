@@ -129,7 +129,7 @@ NAVBAR
 ========================= */
 
 .ivr-navbar{
-    display:flex;
+    display:sticky;
 
     justify-content:space-between;
     align-items:center;
