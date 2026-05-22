@@ -86,19 +86,19 @@ function toggleNavbar() {{
             <div class="nav-links">
 
 
-                <a href="https://ivr-watermark-tool.streamlit.app" target="_top">
+                <a href="https://ivr-watermark-tool.streamlit.app" target="_self">
                     تعليم الملفات
                 </a>
 
-                <a href="https://ivr-merge-tool.streamlit.app" target="_top">
+                <a href="https://ivr-merge-tool.streamlit.app" target="_self">
                     دمج الملفات
                 </a>
 
-                <a href="https://ivr-imagetopdf-tool.streamlit.app" target="_top">
+                <a href="https://ivr-imagetopdf-tool.streamlit.app" target="_self">
                     الصور إلى PDF
                 </a>
-                
-                <a href="" target="_top"></a>
+
+                <a href="" target="_self"></a>
 
             </div>
 
@@ -143,7 +143,7 @@ function toggleNavbar() {{
 
             <a class="tool-btn"
             href="https://ivr-watermark-tool.streamlit.app"
-            target="_top">
+            target="_self">
 
                 فتح الأداة
 
@@ -170,7 +170,7 @@ function toggleNavbar() {{
 
             <a class="tool-btn"
             href="https://ivr-merge-tool.streamlit.app"
-            target="_top">
+            target="_self">
 
                 فتح الأداة
 
@@ -197,7 +197,7 @@ function toggleNavbar() {{
 
             <a class="tool-btn"
             href="https://ivr-imagetopdf-tool.streamlit.app"
-            target="_top">
+            target="_self">
 
                 فتح الأداة
 
