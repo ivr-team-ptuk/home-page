@@ -116,7 +116,7 @@ STICKY NAVBAR WRAPPER
 ========================= */
 
 .ivr-navbar-wrapper{
-    position:sticky;
+    position:fixed;
     top:10px;
 
     z-index:9999;
