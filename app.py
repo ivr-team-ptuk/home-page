@@ -52,6 +52,18 @@ html_content = """
 {css}
 </style>
 
+<script>
+
+function toggleNavbar() {{
+
+    const navbar =
+        document.getElementById("navbarWrapper");
+
+    navbar.classList.toggle("collapsed");
+}}
+
+</script>
+
 <div class="page-wrapper">
 
     <!-- TOGGLE BUTTON -->
@@ -217,9 +229,8 @@ function toggleNavbar() {
 # RENDER HTML
 # =========================
 
-components.html(
+st.markdown(
     html_content,
-    height=1400,
-    scrolling=False
+    unsafe_allow_html=True
 )
 

@@ -38,6 +38,24 @@ body{
         );
 }
 
+.stApp{
+    background:
+        linear-gradient(
+            135deg,
+            #0c5157,
+            #08393d
+        );
+}
+
+[data-testid="stAppViewContainer"]{
+    background:transparent;
+}
+
+.main .block-container{
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
 /* =========================
 PAGE WRAPPER
 ========================= */
@@ -293,6 +311,7 @@ FOOTER
 
     color:rgba(255,255,255,0.5);
 }
+
 
 /* =========================
 MOBILE
