@@ -81,30 +81,43 @@ PAGE WRAPPER
 TOGGLE BUTTON
 ========================= */
 
+/* =========================
+TOGGLE BUTTON
+========================= */
+
 .nav-toggle{
-    position:sticky;
+
+    position:absolute;
 
     top:18px;
+
     left:18px;
 
-    width:48px;
-    height:48px;
+    z-index:10000;
+
+    width:46px;
+    height:46px;
 
     border:none;
+
     border-radius:14px;
 
     cursor:pointer;
 
-    z-index:99999;
-
     color:white;
+
     font-size:20px;
 
     background:rgba(255,255,255,0.08);
 
     backdrop-filter:blur(12px);
 
-    transition:0.2s;
+    transition:0.25s;
+}
+
+.nav-toggle:hover{
+
+    background:rgba(255,255,255,0.14);
 }
 
 .nav-toggle:hover{
@@ -157,6 +170,7 @@ COLLAPSED NAVBAR
 ========================= */
 
 .ivr-navbar-wrapper.collapsed .ivr-navbar{
+
     opacity:0;
 
     transform:translateY(-20px);
@@ -169,6 +183,8 @@ COLLAPSED NAVBAR
     margin-bottom:0;
 
     border:none;
+
+    overflow:hidden;
 }
 
 /* =========================
