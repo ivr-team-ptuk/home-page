@@ -46,7 +46,7 @@ with open("style.css", encoding="utf-8") as f:
 # HTML CONTENT
 # =========================
 
-html_content = """
+html_content = f"""
 
 <style>
 {css}
@@ -213,13 +213,13 @@ function toggleNavbar() {{
 
 <script>
 
-function toggleNavbar() {
+function toggleNavbar() {{
 
     const navbar =
         document.getElementById("navbarWrapper");
 
     navbar.classList.toggle("collapsed");
-}
+}}
 
 </script>
 
