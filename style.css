@@ -7,31 +7,35 @@
     --bg:#0c5157;
     --bg-dark:#08393d;
 
-    --surface:rgba(255,255,255,0.06);
     --border:rgba(255,255,255,0.08);
 
     --text:#ffffff;
     --text-muted:rgba(255,255,255,0.75);
-
-    --radius:24px;
 }
 
 /* =========================
 GLOBAL
 ========================= */
 
+*{
+    box-sizing:border-box;
+    font-family:'Almarai',sans-serif;
+    color:white;
+}
+
 html,
 body{
     margin:0;
     padding:0;
     direction:rtl;
-    font-family:'Almarai',sans-serif;
-    background:transparent;
-    color:var(--text);
-}
+    overflow-x:hidden;
 
-*{
-    box-sizing:border-box;
+    background:
+        linear-gradient(
+            135deg,
+            var(--bg),
+            var(--bg-dark)
+        );
 }
 
 /* =========================
@@ -40,7 +44,12 @@ PAGE WRAPPER
 
 .page-wrapper{
     min-height:100vh;
-    padding:20px;
+
+    padding:
+        20px
+        20px
+        60px
+        20px;
 
     background:
         linear-gradient(
