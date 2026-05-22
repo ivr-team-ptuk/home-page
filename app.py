@@ -29,31 +29,31 @@ load_css()
 # =========================
 
 st.markdown("""
-
 <div class="ivr-navbar">
 
     <div class="nav-logo">
-        IVR PDF Tools
+        IVR Tools
     </div>
 
     <div class="nav-links">
+        <a href="https://home-url.streamlit.app" target="_self">
+            الرئيسية
+        </a>
 
-        <a href="https://ivr-watermark-tool.streamlit.app">
+        <a href="https://merge-url.streamlit.app" target="_self">
+            دمج PDF
+        </a>
+
+        <a href="https://watermark-url.streamlit.app" target="_self">
             تعليم الملفات
         </a>
 
-        <a href="https://ivr-merge-tool.streamlit.app">
-            دمج الملفات
+        <a href="https://images-url.streamlit.app" target="_self">
+            صور إلى PDF
         </a>
-
-        <a href="https://ivr-imagetopdf-tool.streamlit.app">
-            الصور إلى PDF
-        </a>
-
     </div>
 
 </div>
-
 """, unsafe_allow_html=True)
 
 # =========================
