@@ -84,9 +84,6 @@ function toggleNavbar() {{
                     src="https://raw.githubusercontent.com/ivr-team-ptuk/home-page/main/Black_Square-01.svg"
                     class="nav-logo-img"
                 >
-                <span>
-                    IVR PDF Tools
-                </span>
             </a>
 
             <div class="nav-links">
