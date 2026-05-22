@@ -26,10 +26,6 @@ with open("style.css", encoding="utf-8") as f:
 st.markdown("""
 <div class="ivr-navbar">
 
-    <div class="nav-logo">
-        IVR PDF Tools
-    </div>
-
     <div class="nav-links">
 
         <a href="https://home-url.streamlit.app"
