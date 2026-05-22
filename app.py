@@ -32,15 +32,6 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# st.markdown("""
-# <div class="ivr-navbar">
-#         <a href="https://home-url.streamlit.app" target="_self">الرئيسية</a>
-#         <a href="https://merge-url.streamlit.app" target="_self">دمج PDF</a>
-#         <a href="https://watermark-url.streamlit.app" target="_self">تعليم الملفات</a>
-#         <a href="https://images-url.streamlit.app" target="_self">صور إلى PDF</a>
-# </div>
-# """, unsafe_allow_html=True)
-
 # =========================
 # HERO
 # =========================
@@ -66,22 +57,14 @@ st.markdown("""
 
 col1, col2, col3 = st.columns(3)
 
-# =========================
-# MERGE
-# =========================
-
 with col1:
 
     st.markdown("""
     <div class="tool-card">
 
-        <div class="tool-icon">
-            📄
-        </div>
+        <div class="tool-icon">📄</div>
 
-        <h3>
-            دمج ملفات PDF
-        </h3>
+        <h3>دمج ملفات PDF</h3>
 
         <p>
             دمج عدة ملفات PDF
@@ -90,78 +73,62 @@ with col1:
         </p>
 
         <a class="tool-btn"
-        href="https://merge-url.streamlit.app"
-        target="_self">
+        href="https://ivr-merge-tool.streamlit.app"
+        target="_blank">
 
-            فتح الأداة
+        فتح الأداة
 
         </a>
 
     </div>
     """, unsafe_allow_html=True)
-
-# =========================
-# WATERMARK
-# =========================
 
 with col2:
 
     st.markdown("""
     <div class="tool-card">
 
-        <div class="tool-icon">
-            🛡️
-        </div>
+        <div class="tool-icon">🖋️</div>
 
-        <h3>
-            تعليم الملفات
-        </h3>
+        <h3>تعليم ملفات PDF</h3>
 
         <p>
-            إضافة شعارات وعلامات
-            مائية على ملفات PDF
-            بشكل احترافي.
+            إضافة علامة مائية
+            احترافية على ملفات PDF
+            بعدة أوضاع.
         </p>
 
         <a class="tool-btn"
-        href="https://watermark-url.streamlit.app"
-        target="_self">
+        href="https://ivr-watermark-tool.streamlit.app"
+        target="_blank">
 
-            فتح الأداة
+        فتح الأداة
 
         </a>
 
     </div>
     """, unsafe_allow_html=True)
 
-# =========================
-# IMAGES TO PDF
-# =========================
-
 with col3:
 
     st.markdown("""
     <div class="tool-card">
 
-        <div class="tool-icon">
-            🖼️
-        </div>
+        <div class="tool-icon">🖼️</div>
 
-        <h3>
-            صور إلى PDF
-        </h3>
+        <h3>تحويل الصور إلى PDF</h3>
 
         <p>
-            تحويل الصور إلى PDF
-            مع ترتيب الصفحات
-            وإضافة علامات مرجعية.
+            تحويل الصور إلى
+            ملف PDF واحد
+            مع ترتيب الصفحات.
         </p>
 
         <a class="tool-btn"
-        href="https://images-url.streamlit.app"
-        target="_self">
+        href="https://ivr-imagetopdf-tool.streamlit.app"
+        target="_blank">
 
-            فتح الأداة
+        فتح الأداة
 
         </a>
 
