@@ -332,7 +332,7 @@ FOOTER
 ========================= */
 
 .footer{
-    text-align:center;
+    text-align:center !important;
 
     padding:60px 0 20px;
 
