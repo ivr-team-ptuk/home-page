@@ -43,15 +43,6 @@ html_content = f"""
 
     <!-- NAVBAR -->
     <nav class="ivr-navbar-wrapper" id="navbarWrapper">
-
-        <button
-            class="nav-toggle"
-            onclick="toggleNavbar()"
-            aria-label="تبديل القائمة"
-            aria-expanded="true"
-            aria-controls="navbarWrapper"
-        >☰</button>
-
         <div class="ivr-navbar">
 
             <a href="https://ivr-home-page.streamlit.app" class="nav-logo">
@@ -63,19 +54,34 @@ html_content = f"""
             </a>
 
             <div class="nav-links">
-                <a href="https://ivr-watermark-tool.streamlit.app" target="_blank">تعليم الملفات</a>
-                <a href="https://ivr-merge-tool.streamlit.app" target="_blank">دمج الملفات</a>
-                <a href="https://ivr-imagetopdf-tool.streamlit.app" target="_blank">الصور إلى PDF</a>
+                <a href="https://ivr-watermark-tool.streamlit.app">تعليم الملفات</a>
+                <a href="https://ivr-merge-tool.streamlit.app">دمج الملفات</a>
+                <a href="https://ivr-imagetopdf-tool.streamlit.app">الصور إلى PDF</a>
             </div>
 
-        </div>
+            <button
+                class="nav-toggle"
+                onclick="toggleNavbar()"
+                aria-label="تبديل القائمة"
+                aria-expanded="true"
+                aria-controls="navbarWrapper"
+            >☰</button>
 
+        </div>
     </nav>
 
     <!-- HERO -->
     <section class="hero">
+
+        <img
+            src="https://raw.githubusercontent.com/ivr-team-ptuk/home-page/main/Black_Square-01.svg"
+            class="hero-logo"
+            alt="IVR Logo"
+        >
+
         <h1>أدوات PDF خاصة بأعضاء اللجنة العلمية</h1>
         <p>منصة لمعالجة ملفات PDF بسهولة</p>
+
     </section>
 
     <!-- TOOLS -->
@@ -85,21 +91,21 @@ html_content = f"""
             <div class="tool-icon">🖊️</div>
             <h3>تعليم الملفات</h3>
             <p>إضافة علامات مائية احترافية على ملفات PDF</p>
-            <a class="tool-btn" href="https://ivr-watermark-tool.streamlit.app" target="_blank">فتح الأداة</a>
+            <a class="tool-btn" href="https://ivr-watermark-tool.streamlit.app">فتح الأداة</a>
         </div>
 
         <div class="tool-card">
             <div class="tool-icon">📚</div>
             <h3>دمج الملفات</h3>
             <p>دمج عدة ملفات PDF داخل ملف واحد</p>
-            <a class="tool-btn" href="https://ivr-merge-tool.streamlit.app" target="_blank">فتح الأداة</a>
+            <a class="tool-btn" href="https://ivr-merge-tool.streamlit.app">فتح الأداة</a>
         </div>
 
         <div class="tool-card">
             <div class="tool-icon">🖼️</div>
             <h3>الصور إلى PDF</h3>
             <p>تحويل الصور إلى ملفات PDF بجودة عالية</p>
-            <a class="tool-btn" href="https://ivr-imagetopdf-tool.streamlit.app" target="_blank">فتح الأداة</a>
+            <a class="tool-btn" href="https://ivr-imagetopdf-tool.streamlit.app">فتح الأداة</a>
         </div>
 
     </div>
@@ -112,33 +118,12 @@ html_content = f"""
 </div>
 
 <script>
-    // =========================
-    // NAVBAR TOGGLE
-    // =========================
-
     function toggleNavbar() {{
-        const wrapper = document.getElementById("navbarWrapper");
-        const btn     = wrapper.querySelector(".nav-toggle");
-        const isNowCollapsed = wrapper.classList.toggle("collapsed");
-
-        btn.setAttribute("aria-expanded", isNowCollapsed ? "false" : "true");
+        const wrapper  = document.getElementById("navbarWrapper");
+        const btn      = wrapper.querySelector(".nav-toggle");
+        const collapsed = wrapper.classList.toggle("collapsed");
+        btn.setAttribute("aria-expanded", collapsed ? "false" : "true");
     }}
-
-    // =========================
-    // AUTO-RESIZE IFRAME
-    // (notifies Streamlit of true content height)
-    // =========================
-
-    function sendHeight() {{
-        const height = document.querySelector(".page-wrapper").scrollHeight;
-        window.parent.postMessage(
-            {{ type: "streamlit:setFrameHeight", height: height }},
-            "*"
-        );
-    }}
-
-    document.addEventListener("DOMContentLoaded", sendHeight);
-    window.addEventListener("resize", sendHeight);
 </script>
 """
 
@@ -146,4 +131,4 @@ html_content = f"""
 # RENDER HTML
 # =========================
 
-components.html(html_content, height=1000, scrolling=True)
+components.html(html_content, height=1050, scrolling=True)
