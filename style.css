@@ -240,6 +240,7 @@ body {
     .hero-logo {
         width: 110px;
         margin-bottom: 20px;
+        filter:       drop-shadow(0 4px 16px rgba(255, 255, 255, 0.40));
     }
 
     .hero h1 {
