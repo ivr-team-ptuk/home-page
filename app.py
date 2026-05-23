@@ -17,21 +17,9 @@ st.set_page_config(
 
 st.markdown("""
 <style>
-
-#MainMenu,
-header,
-footer{
-    visibility:hidden;
-}
-
-.block-container{
-    padding:0;
-}
-
-iframe{
-    border:none !important;
-}
-
+#MainMenu, header, footer { visibility: hidden; }
+.block-container { padding: 0; }
+iframe { border: none !important; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -47,199 +35,115 @@ with open("style.css", encoding="utf-8") as f:
 # =========================
 
 html_content = f"""
-
 <style>
 {css}
 </style>
 
-<script>
-
-function toggleNavbar() {{
-
-    const navbar =
-        document.getElementById("navbarWrapper");
-
-    navbar.classList.toggle("collapsed");
-}}
-
-</script>
-
 <div class="page-wrapper">
 
     <!-- NAVBAR -->
-    <div class="ivr-navbar-wrapper" id="navbarWrapper">
+    <nav class="ivr-navbar-wrapper" id="navbarWrapper">
 
-
-            <!-- TOGGLE BUTTON -->
-
-            <button class="nav-toggle" onclick="toggleNavbar()">
-                ☰
-            </button>
+        <button
+            class="nav-toggle"
+            onclick="toggleNavbar()"
+            aria-label="تبديل القائمة"
+            aria-expanded="true"
+            aria-controls="navbarWrapper"
+        >☰</button>
 
         <div class="ivr-navbar">
 
-            <a href="https://ivr-home-page.streamlit.app"
-            class="nav-logo">
+            <a href="https://ivr-home-page.streamlit.app" class="nav-logo">
                 <img
                     src="https://raw.githubusercontent.com/ivr-team-ptuk/home-page/main/Black_Square-01.svg"
                     class="nav-logo-img"
+                    alt="IVR Logo"
                 >
             </a>
 
             <div class="nav-links">
-
-
-                <a href="https://ivr-watermark-tool.streamlit.app" target="_blank">
-                    تعليم الملفات
-                </a>
-
-                <a href="https://ivr-merge-tool.streamlit.app" target="_blank">
-                    دمج الملفات
-                </a>
-
-                <a href="https://ivr-imagetopdf-tool.streamlit.app" target="_blank">
-                    الصور إلى PDF
-                </a>
-
-                <a href="" target="_blank"></a>
-
+                <a href="https://ivr-watermark-tool.streamlit.app" target="_blank">تعليم الملفات</a>
+                <a href="https://ivr-merge-tool.streamlit.app" target="_blank">دمج الملفات</a>
+                <a href="https://ivr-imagetopdf-tool.streamlit.app" target="_blank">الصور إلى PDF</a>
             </div>
 
         </div>
 
-    </div>
+    </nav>
 
     <!-- HERO -->
-
-    <div class="hero">
-
-        <h1>
-            أدوات PDF خاصة بأعضاء اللجنة العلمية
-        </h1>
-
-        <p>
-            منصة لمعالجة ملفات PDF بسهولة
-        </p>
-
-    </div>
+    <section class="hero">
+        <h1>أدوات PDF خاصة بأعضاء اللجنة العلمية</h1>
+        <p>منصة لمعالجة ملفات PDF بسهولة</p>
+    </section>
 
     <!-- TOOLS -->
-
     <div class="tools-grid">
 
-        <!-- WATERMARK -->
-
         <div class="tool-card">
-
-            <div class="tool-icon">
-                🖊️
-            </div>
-
-            <h3>
-                تعليم الملفات
-            </h3>
-
-            <p>
-                إضافة علامات مائية احترافية
-                على ملفات PDF
-            </p>
-
-            <a class="tool-btn"
-            href="https://ivr-watermark-tool.streamlit.app"
-            target="_blank">
-
-                فتح الأداة
-
-            </a>
-
+            <div class="tool-icon">🖊️</div>
+            <h3>تعليم الملفات</h3>
+            <p>إضافة علامات مائية احترافية على ملفات PDF</p>
+            <a class="tool-btn" href="https://ivr-watermark-tool.streamlit.app" target="_blank">فتح الأداة</a>
         </div>
 
-        <!-- MERGE -->
-
         <div class="tool-card">
-
-            <div class="tool-icon">
-                📚
-            </div>
-
-            <h3>
-                دمج الملفات
-            </h3>
-
-            <p>
-                دمج عدة ملفات PDF
-                داخل ملف واحد
-            </p>
-
-            <a class="tool-btn"
-            href="https://ivr-merge-tool.streamlit.app"
-            target="_blank">
-
-                فتح الأداة
-
-            </a>
-
+            <div class="tool-icon">📚</div>
+            <h3>دمج الملفات</h3>
+            <p>دمج عدة ملفات PDF داخل ملف واحد</p>
+            <a class="tool-btn" href="https://ivr-merge-tool.streamlit.app" target="_blank">فتح الأداة</a>
         </div>
 
-        <!-- IMAGE TO PDF -->
-
         <div class="tool-card">
-
-            <div class="tool-icon">
-                🖼️
-            </div>
-
-            <h3>
-                الصور إلى PDF
-            </h3>
-
-            <p>
-                تحويل الصور إلى ملفات PDF
-                بجودة عالية
-            </p>
-
-            <a class="tool-btn"
-            href="https://ivr-imagetopdf-tool.streamlit.app"
-            target="_blank">
-
-                فتح الأداة
-
-            </a>
-
+            <div class="tool-icon">🖼️</div>
+            <h3>الصور إلى PDF</h3>
+            <p>تحويل الصور إلى ملفات PDF بجودة عالية</p>
+            <a class="tool-btn" href="https://ivr-imagetopdf-tool.streamlit.app" target="_blank">فتح الأداة</a>
         </div>
 
     </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        IVR Engineering Society &copy; 2026
+    </footer>
 
 </div>
 
 <script>
+    // =========================
+    // NAVBAR TOGGLE
+    // =========================
 
-function toggleNavbar() {{
+    function toggleNavbar() {{
+        const wrapper = document.getElementById("navbarWrapper");
+        const btn     = wrapper.querySelector(".nav-toggle");
+        const isNowCollapsed = wrapper.classList.toggle("collapsed");
 
-    const navbar =
-        document.getElementById("navbarWrapper");
+        btn.setAttribute("aria-expanded", isNowCollapsed ? "false" : "true");
+    }}
 
-    navbar.classList.toggle("collapsed");
-}}
+    // =========================
+    // AUTO-RESIZE IFRAME
+    // (notifies Streamlit of true content height)
+    // =========================
 
+    function sendHeight() {{
+        const height = document.querySelector(".page-wrapper").scrollHeight;
+        window.parent.postMessage(
+            {{ type: "streamlit:setFrameHeight", height: height }},
+            "*"
+        );
+    }}
+
+    document.addEventListener("DOMContentLoaded", sendHeight);
+    window.addEventListener("resize", sendHeight);
 </script>
-
 """
 
 # =========================
 # RENDER HTML
 # =========================
 
-components.html( html_content, height=950, scrolling=True )
-
-# =========================
-# FOOTER
-# =========================
-
-st.markdown("""
-<div class="footer">
-
-    IVR Engineering Society © 2026
-
-</div>
-""", unsafe_allow_html=True)
+components.html(html_content, height=1000, scrolling=True)
