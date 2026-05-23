@@ -62,21 +62,21 @@ html_content = f"""
             <div class="tool-icon">🖊️</div>
             <h3>تعليم الملفات</h3>
             <p>إضافة علامات مائية احترافية على ملفات PDF</p>
-            <a class="tool-btn" href="https://ivr-watermark-tool.streamlit.app">فتح الأداة</a>
+            <a class="tool-btn" href="https://ivr-watermark-tool.streamlit.app" target= "_blank">فتح الأداة</a>
         </div>
 
         <div class="tool-card">
             <div class="tool-icon">📚</div>
             <h3>دمج الملفات</h3>
             <p>دمج عدة ملفات PDF داخل ملف واحد</p>
-            <a class="tool-btn" href="https://ivr-merge-tool.streamlit.app">فتح الأداة</a>
+            <a class="tool-btn" href="https://ivr-merge-tool.streamlit.app"  target= "_blank">فتح الأداة</a>
         </div>
 
         <div class="tool-card">
             <div class="tool-icon">🖼️</div>
             <h3>الصور إلى PDF</h3>
             <p>تحويل الصور إلى ملفات PDF بجودة عالية</p>
-            <a class="tool-btn" href="https://ivr-imagetopdf-tool.streamlit.app">فتح الأداة</a>
+            <a class="tool-btn" href="https://ivr-imagetopdf-tool.streamlit.app"  target= "_blank">فتح الأداة</a>
         </div>
 
     </div>
