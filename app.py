@@ -44,7 +44,7 @@ html_content = f"""
     <!-- HERO -->
     <section class="hero">
 
-        <img
+        <img style: filter:       drop-shadow(0 4px 16px rgba(255, 255, 255, 0.40));
             src="https://raw.githubusercontent.com/ivr-team-ptuk/home-page/main/Black_Square-01.svg"
             class="hero-logo"
             alt="IVR Logo"
