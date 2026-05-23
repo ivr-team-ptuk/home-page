@@ -238,9 +238,11 @@ body {
     }
 
     .hero-logo {
-        width: 110px;
-        margin-bottom: 20px;
-        filter:       drop-shadow(0 4px 16px rgba(255, 255, 255, 0.40));
+    width:        160px;
+    height:       80px;
+    object-fit:   contain;
+    margin-bottom: 16px;
+    filter:       drop-shadow(0 4px 16px rgba(255, 255, 255, 0.40));
     }
 
     .hero h1 {
