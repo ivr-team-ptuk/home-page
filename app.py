@@ -45,7 +45,7 @@ html_content = f"""
     <section class="hero">
 
         <img
-            src="https://raw.githubusercontent.com/ivr-team-ptuk/home-page/refs/heads/main/Black_Square-01.svg"
+            src="https://raw.githubusercontent.com/ivr-team-ptuk/home-page/main/Black_Square-01.svg"
             class="hero-logo"
             alt="IVR Logo"
         >
