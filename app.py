@@ -41,35 +41,6 @@ html_content = f"""
 
 <div class="page-wrapper">
 
-    <!-- NAVBAR -->
-    <nav class="ivr-navbar-wrapper" id="navbarWrapper">
-        <div class="ivr-navbar">
-
-            <a href="https://ivr-home-page.streamlit.app" class="nav-logo">
-                <img
-                    src="https://raw.githubusercontent.com/ivr-team-ptuk/home-page/main/Black_Square-01.svg"
-                    class="nav-logo-img"
-                    alt="IVR Logo"
-                >
-            </a>
-
-            <div class="nav-links">
-                <a href="https://ivr-watermark-tool.streamlit.app">تعليم الملفات</a>
-                <a href="https://ivr-merge-tool.streamlit.app">دمج الملفات</a>
-                <a href="https://ivr-imagetopdf-tool.streamlit.app">الصور إلى PDF</a>
-            </div>
-
-            <button
-                class="nav-toggle"
-                onclick="toggleNavbar()"
-                aria-label="تبديل القائمة"
-                aria-expanded="true"
-                aria-controls="navbarWrapper"
-            >☰</button>
-
-        </div>
-    </nav>
-
     <!-- HERO -->
     <section class="hero">
 
